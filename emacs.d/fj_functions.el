@@ -18,6 +18,7 @@
          "\"^M^[!git push^M"
          )
         )
+
   (fset 'git_push mac_git)
   (execute-kbd-macro 'git_push)
   )
@@ -53,6 +54,7 @@
   )
 
 (global-set-key (kbd "C-_") 'bar)
+(global-set-key (kbd "C--") 'bar)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; CUSTOM COMMENT [C-^]
@@ -78,6 +80,7 @@
                        ; SECTION COMMENT [M-s M-c]
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (defun section-comment ()
+  (interactive)  
   (setq mode (message "%s" major-mode))
   (setq ch "/")
 
@@ -91,7 +94,6 @@
   (if (string-equal "emacs-lisp-mode" mode) (setq ch ";"))
   (if (string-equal "fundamental-mode" mode) (setq ch "-"))
   
-  (interactive)
   (setq prompt "Section Comment: ")
   (setq input (read-from-minibuffer prompt))
   (setq str_len (length input))

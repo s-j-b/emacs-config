@@ -17,7 +17,6 @@
 (setq js-basic-offset 4)
 (setq html-basic-offset 2)
 
-(setq select-enable-clipboard nil)
 
 ;; Add TypeScript mode for .tsx files
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
@@ -51,14 +50,8 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; linum mode
 
-(global-display-line-numbers-mode 1)
-
-(set-face-attribute 'region nil :background "#2b3030")
 
 
-(setq column-number-mode t)
-(setq inhibit-startup-message t)
-(setq linum-format "%d ")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
@@ -82,3 +75,4 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
